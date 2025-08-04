@@ -306,4 +306,4 @@ valuable. The best way to grow in cybersecurity is to keep showing up, keep prac
 Progress might feel slow at times, but if you stay consistent, you'll be amazed at how far you go. Also try to
 read writeups of challenges in your free time. Everyone starts somewhere. JUST START.
 
-exiftool <file>
+<file>
