@@ -1,6 +1,6 @@
 # Base URL used when generating links to your pages
 # Set to the URL for your site
-baseURL = "https://d4rkc0pe.github.io"
+baseURL = "https://d4rkc0pe.github.io/d4rkc0pe-blog/"
 
 # The name of this wonderful theme ;-).
 theme = 'hugo-bearblog'
@@ -47,7 +47,7 @@ ignoreErrors = ["error-disable-taxonomy"]
   # 8601](https://en.wikipedia.org/wiki/ISO_8601) format:
   # dateFormat = "2006-01-02"
 
-# Configure markup highlighter to match "Bearblog" aesthetics, see 
+# Configure markup highlighter to match "Bearblog" aesthetics, see
 # https://gohugo.io/configuration/markup/#highlight
 [markup]
   [markup.highlight]
