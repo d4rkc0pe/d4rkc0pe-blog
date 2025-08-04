@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://d4rkc0pe.github.io/</loc>
+    <loc>https://d4rkc0pe.github.io/d4rkc0pe-blog/</loc>
+    <lastmod>2025-08-04T15:25:00+00:00</lastmod>
+    <priority>0</priority>
+  </url><url>
+    <loc>https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/binary-exploitation/</loc>
+    <lastmod>2025-08-04T15:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d4rkc0pe.github.io/d4rkc0pe-blog/blogs/</loc>
+    <lastmod>2025-08-04T15:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/cryptography/</loc>
+    <lastmod>2025-08-04T15:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/forensics/</loc>
+    <lastmod>2025-08-04T15:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/introduction/</loc>
+    <lastmod>2025-08-04T15:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/miscellaneous/</loc>
+    <lastmod>2025-08-04T15:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/most-important-note/</loc>
+    <lastmod>2025-08-04T15:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/resources/</loc>
+    <lastmod>2025-08-04T15:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/reverse-engineering/</loc>
+    <lastmod>2025-08-04T15:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d4rkc0pe.github.io/d4rkc0pe-blog/blogs/ctf-handbook/</loc>
+    <lastmod>2025-08-04T15:25:00+00:00</lastmod>
+  </url><url>
+    <loc>https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/web-exploitation/</loc>
+    <lastmod>2025-08-04T15:25:00+00:00</lastmod>
   </url>
 </urlset>

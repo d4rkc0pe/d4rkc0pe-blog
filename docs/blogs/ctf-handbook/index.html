@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="https://d4rkc0pe.github.io/d4rkc0pe-blog/images/favicon.png" />
+<title>The Complete CTF Handbook | d4rkc0pe Blog</title>
+<meta name="title" content="The Complete CTF Handbook" />
+<meta name="description" content="This handbook is a comprehensive compilation of notes and resources from the d4rkc0de-club/ctf-handbook GitHub repository, designed for beginners and enthusiasts in the world of Capture The Flag competitions.
+ Introduction What actually are CTFs ? A CTF is like a puzzle game for hackers. In simple words, we are given a machine or program which is hackeable and we get a string that we submit and we get points. The flags are usually in the form of FLAG {y0u-h4v3-f0und-4-fl4g}." />
+<meta name="keywords" content="Introduction,Resources,Web Exploitation,Binary Exploitation,Reverse Engineering,Cryptography,Forensics,Miscellaneous,Most Important Note," />
+
+
+<meta property="og:title" content="The Complete CTF Handbook" />
+<meta property="og:description" content="This handbook is a comprehensive compilation of notes and resources from the d4rkc0de-club/ctf-handbook GitHub repository, designed for beginners and enthusiasts in the world of Capture The Flag competitions.
+ Introduction What actually are CTFs ? A CTF is like a puzzle game for hackers. In simple words, we are given a machine or program which is hackeable and we get a string that we submit and we get points. The flags are usually in the form of FLAG {y0u-h4v3-f0und-4-fl4g}." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://d4rkc0pe.github.io/d4rkc0pe-blog/blogs/ctf-handbook/" /><meta property="og:image" content="https://d4rkc0pe.github.io/d4rkc0pe-blog/images/share.png"/><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2025-08-04T15:25:00+00:00" />
+<meta property="article:modified_time" content="2025-08-04T15:25:00+00:00" />
+
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://d4rkc0pe.github.io/d4rkc0pe-blog/images/share.png"/>
+
+<meta name="twitter:title" content="The Complete CTF Handbook"/>
+<meta name="twitter:description" content="This handbook is a comprehensive compilation of notes and resources from the d4rkc0de-club/ctf-handbook GitHub repository, designed for beginners and enthusiasts in the world of Capture The Flag competitions.
+ Introduction What actually are CTFs ? A CTF is like a puzzle game for hackers. In simple words, we are given a machine or program which is hackeable and we get a string that we submit and we get points. The flags are usually in the form of FLAG {y0u-h4v3-f0und-4-fl4g}."/>
+
+
+
+<meta itemprop="name" content="The Complete CTF Handbook">
+<meta itemprop="description" content="This handbook is a comprehensive compilation of notes and resources from the d4rkc0de-club/ctf-handbook GitHub repository, designed for beginners and enthusiasts in the world of Capture The Flag competitions.
+ Introduction What actually are CTFs ? A CTF is like a puzzle game for hackers. In simple words, we are given a machine or program which is hackeable and we get a string that we submit and we get points. The flags are usually in the form of FLAG {y0u-h4v3-f0und-4-fl4g}."><meta itemprop="datePublished" content="2025-08-04T15:25:00+00:00" />
+<meta itemprop="dateModified" content="2025-08-04T15:25:00+00:00" />
+<meta itemprop="wordCount" content="1533"><meta itemprop="image" content="https://d4rkc0pe.github.io/d4rkc0pe-blog/images/share.png"/>
+<meta itemprop="keywords" content="Introduction,Resources,Web Exploitation,Binary Exploitation,Reverse Engineering,Cryptography,Forensics,Miscellaneous,Most Important Note," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --code-background-color: #000;
+      --code-color: #ddd;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Doto:wght@700&display=swap');
+
+  :root {
+    --width: 720px;
+    --font-main: 'Doto', sans-serif;
+    --font-secondary: 'Doto', sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #00ff00;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --code-background-color: #000;
+      --code-color: #ddd;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+</head>
+
+<body>
+  <header><a href="/d4rkc0pe-blog/" class="title">
+  <h2>d4rkc0pe Blog</h2>
+</a>
+<nav>
+</nav>
+</header>
+  <main>
+
+<content>
+  <blockquote>
+<p>This handbook is a comprehensive compilation of notes and resources from the <a href="https://github.com/d4rkc0de-club/ctf-handbook">d4rkc0de-club/ctf-handbook</a> GitHub repository, designed for beginners and enthusiasts in the world of Capture The Flag competitions.</p>
+</blockquote>
+<h2 id="introduction">Introduction</h2>
+<h3 id="what-actually-are-ctfs-">What actually are CTFs ?</h3>
+<p>A CTF is like a puzzle game for hackers. In simple words, we are given a machine or program which is hackeable
+and we get a string that we submit and we get points. The flags are usually in the form of FLAG
+{y0u-h4v3-f0und-4-fl4g}.</p>
+<h3 id="how-do-ctfs-work-">How do CTFs work ?</h3>
+<p>CTFs are of different kinds but the kind that we have to focus on are Jeopardy-style which is solving standalone
+challenges from various categories to earn points. The categories include web, pwn, rev, cryto, forensics, osint,
+and misc.</p>
+<h4 id="scoring-in-ctf">Scoring In CTF</h4>
+<p>The scoring can be of two types</p>
+<ol>
+<li>
+<p>Static Scoring
+Every challenge has a fixed value based on their defined difficulty. Ex - 100 for easy, 300 for medium and 500 for hard.</p>
+</li>
+<li>
+<p>Dynamic Scoring
+This is the most common type of scoring. Points decrease as more teams solve the challenge.</p>
+</li>
+</ol>
+<h4 id="ctftime">CTFtime</h4>
+<p>It is the central hub for competitive CTFs. It tracks</p>
+<ul>
+<li>Upcoming &amp; ongoing CTF events</li>
+<li>Team rankings</li>
+<li>CTF writeups and archives</li>
+<li>Links to scoreboards and challenges</li>
+</ul>
+<p>CTF players use this to</p>
+<ul>
+<li>Plan which competitions to join</li>
+<li>Track performance</li>
+<li>View writeups and results</li>
+</ul>
+<p>CTFtime Points</p>
+<ul>
+<li>CTFtime assigns rating point to teams based on their performance in rated CTFs.</li>
+<li>Only top 10 performances of a team are rated on CTFtime</li>
+<li>Each CTF is worth up to 100 CTFtime points</li>
+<li>The rankings reset ever calendar year</li>
+</ul>
+<hr>
+<h2 id="resources">Resources</h2>
+<h3 id="basics">Basics</h3>
+<p>These are the basic things that you need to do if you are going to start cybersecurity. It is important to keep
+the basics clear if you want be be good. These basics include :</p>
+<h4 id="linux">Linux</h4>
+<p>In cybersecurity, linux is the go-to OS. It gives you control, power and tools that the cybersecurity relies on.
+Most of the servers in the world run on linux. You can get started with it in 3 ways.</p>
+<ul>
+<li>You can use the windows subsystem for linux (WSL) if you are on Windows.</li>
+<li>You can use virtual machines using softwares like VMware or VirtualBox.</li>
+<li>If like to take risks, you can just run it bare metal on your device.</li>
+</ul>
+<h4 id="practice">Practice</h4>
+<ul>
+<li><a href="https://pwn.college/linux-luminarium/">pwn.college Linux Luminarium</a></li>
+</ul>
+<h3 id="basic-programming">Basic Programming</h3>
+<p>You need to learn basic programming for cybersec but you are not expected to know everything in every language. The best way is to just learn python and then learn others if they align with your domain.</p>
+<ul>
+<li>
+<p><strong>Python</strong> - used for scripting, automation and exploit devlopment. You can learn this from</p>
+<ol>
+<li><a href="https://techtree.iiitd.edu.in/viewDescription/filename?=CSE101">CSE 101 (Introduction to Programming) in IIITD</a></li>
+<li><a href="https://www.youtube.com/watch?v=UrsmFxEIp5k">Automate the Boring Stuff with Python</a></li>
+<li><a href="https://www.youtube.com/watch?v=UrsmFxEIp5k">Hindi Course (Code with Harry)</a></li>
+<li><a href="https://www.youtube.com/watch?v=_uQrJ0TkZlc">English Course (Programming with Mosh)</a></li>
+</ol>
+</li>
+<li>
+<p><strong>C</strong> - used for understanding low level bugs.</p>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=KJgsSFOSQv0">FreeCodeCamp</a></li>
+</ol>
+</li>
+<li>
+<p><strong>JS</strong> - used for web-based CTFs.</p>
+<ol>
+<li><a href="https://eloquentjavascript.net/">Eloquent Javascript</a></li>
+</ol>
+</li>
+<li>
+<p><strong>Assembly</strong> - used for reverse engineering. Both of these resources need to be followed.</p>
+<ol>
+<li><a href="https://pwn.college/computing-101/assembly-crash-course/">pwn.college Intro</a></li>
+<li><a href="https://pwn.college/computing-101/assembly-crash-course/">pwn.college Assembly Crash Course</a></li>
+</ol>
+</li>
+</ul>
+<h3 id="basic-cybersecurity-concepts">Basic Cybersecurity Concepts</h3>
+<ul>
+<li><a href="https://tryhackme.com/path/outline/presecurity">Pre Security Path Tryhackme</a></li>
+<li><a href="https://tryhackme.com/path/outline/cybersecurity101">Cyber Security 101 Tryhackme</a></li>
+</ul>
+<h3 id="basics-practice">Basics Practice</h3>
+<ul>
+<li><a href="https://picoctf.org/">picoCTF</a></li>
+</ul>
+<hr>
+<h2 id="web-exploitation">Web Exploitation</h2>
+<h3 id="overview">Overview</h3>
+<p>Web exploitation is a category of CTF challenges focused on finding and exploiting vulnerabilities in web
+applications. These simulate real-world attacks like breaking into websites, bypassing logins, stealing data, or
+executing unauthorized code. You interact with a target web server through a browser or proxy tools, trying to
+find flaws in logic, security controls, or code behavior. In a CTF challenge, you&rsquo;re typically given a live web
+app hosted at a URL. Your goal is to inspect and manipulate how the site functions until you can trigger a bug
+and retrieve a flag.</p>
+<h3 id="tools">Tools</h3>
+<ul>
+<li>Burpsuite</li>
+<li>Owasp ZAP</li>
+<li>ffuf</li>
+<li>nmap</li>
+<li>nuclei</li>
+<li>gobuster</li>
+<li>CyberChef</li>
+</ul>
+<h3 id="learning-and-practice">Learning and Practice</h3>
+<ul>
+<li><a href="https://tryhackme.com/hacktivities?tab=roadmap">Penetration Tester Route Tryhackme</a> (only follow the web based stuff)</li>
+<li><a href="https://portswigger.net/web-security">PortSwigger Web Security Academy</a> — Interactive labs with theory for every major web vuln (XSS, SQLi, CSRF, etc.).</li>
+<li><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a> — Industry-standard list of the most critical web vulnerabilities.</li>
+<li><a href="https://play.picoctf.org/practice?category=3">picoCTF Web Challenges</a> — Beginner-level challenges with guided hints.</li>
+<li><a href="https://app.hackthebox.com/challenges/web">HackTheBox: Web Challenges</a> — Realistic CTF-style problems, including hosted services.</li>
+</ul>
+<hr>
+<h2 id="binary-exploitation">Binary Exploitation</h2>
+<h3 id="overview-1">Overview</h3>
+<p>Binary Exploitation (often shortened to Binex or pwn) is a category in CTFs that focuses on analyzing and
+exploiting compiled programs (binaries) to gain unintended behavior — like leaking information, hijacking control
+flow, or executing arbitrary code. The goal is to understand how the program works at a low level (assembly
+/memory) and take advantage of flaws in how it handles input, memory, or permissions. This is one of the most
+technically deep categories in CTFs, often requiring knowledge of:</p>
+<ul>
+<li>Assembly language</li>
+<li>Memory layout (stack, heap, etc.)</li>
+<li>Calling conventions</li>
+<li>C/C++ programming</li>
+<li>Operating system internals You typically receive a binary file (a.out, chall, vuln, etc.) and are told to find a way to make it do something it shouldn’t — like read the flag, spawn a shell, or overwrite memory.</li>
+</ul>
+<h3 id="learning-and-practice-1">Learning and Practice</h3>
+<h4 id="pwncollegehttpspwncollege"><a href="https://pwn.college/">pwn.college</a></h4>
+<!-- raw HTML omitted -->
+<ul>
+<li><a href="https://pwn.college/intro-to-cybersecurity/binary-exploitation/">Introduction</a> - Gets into basic buffer overflows, shell-coding and return oriented programming. (must do)</li>
+<li><a href="https://pwn.college/program-security/memory-errors/">Memory Errors</a> - Gets into popular safety checks (ASLR, Canaries) and how to bypass them.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h4 id="rophttpsropemporiumcomindexhtml"><a href="https://ropemporium.com/index.html">ROP</a></h4>
+<p>Teaches Return Oriented Programming, techniques like ret2win, ret2libc, ret2csu, stack pivoting etc.</p>
+<h4 id="heap-exploitationhttpsgithubcomshellphishhow2heap"><a href="https://github.com/shellphish/how2heap">Heap Exploitation</a></h4>
+<p>Teaches heap exploitation strategies with libc. Make use of the ret2 wargames that are linked in the repo.</p>
+<h4 id="pwnablekrhttpspwnablekr"><a href="https://pwnable.kr/">pwnable.kr</a></h4>
+<p>Skip baby&rsquo;s bottle if you know the basics (not recommended). Rookiss has some very good challenges that will
+teach you a lot, try solving those as you learn topics required for them.</p>
+<h4 id="pwntools">pwntools</h4>
+<ul>
+<li>It is a python library used to automate binary exploitation.</li>
+<li><a href="https://github.com/Gallopsled/pwntools-tutorial">Tutorial</a></li>
+</ul>
+<hr>
+<h2 id="reverse-engineering">Reverse Engineering</h2>
+<h3 id="overview-2">Overview</h3>
+<p>It is the process of recovering, understanding and reconstructing the design, data structures and algorithms that
+were used to build software. In CTFs, generally the objective will be to understand the given material (with a
+certain objective in mind) and recover information about the internal workings (often involving a bit of
+cryptography too) to eventually find a flag. One example is password verification, you may be presented with a
+binary containing an algorithm to check if your password is right, your task would then be to understand what is
+being checked, how its being checked, and most probably implement a program to reverse the procedure to get a
+suitable solution. The field itself is vast and has many sub-fields that you may focus on, for example : Game
+Hacking, Android Hacking, Malware Analysis, Hardware / Firmware Hacking etc.</p>
+<h3 id="tools-1">Tools</h3>
+<ul>
+<li><a href="https://github.com/NationalSecurityAgency/ghidra">Ghidra</a></li>
+<li><a href="https://hex-rays.com/ida-free">IDA</a></li>
+<li><a href="https://github.com/pwndbg/pwndbg">GDB</a></li>
+</ul>
+<h3 id="learning-and-practice-2">Learning and Practice</h3>
+<ul>
+<li>
+<p><a href="https://pwn.college/computing-101/debugging-refresher/">pwn.college Debugging Refresher</a> - Debugging (dynamic analysis) is something you will spend a lot of time doing, GDB is taught in this module however the knowledge is transferable to other debuggers too.</p>
+</li>
+<li>
+<p><a href="https://pwn.college/program-security/reverse-engineering/">pwn.college Reverse Engineering</a> - Here you will start actually reverse engineering binaries, it also gets a bit into Virtual Machine obfuscations (which is common in CTFs)</p>
+</li>
+<li>
+<p><a href="https://github.com/ViRb3/z3-python-ctf">z3 Python CTF</a> - Z3 the state-of-the-art SMT solver, it can be used to find inputs to satisfy complex algorithms. (very important)</p>
+</li>
+<li>
+<p>Angr - is a powerful symbolic execution engine that will help automate and speedup the process of finding inputs.</p>
+<ol>
+<li><a href="https://github.com/Hustcw/Angr_Tutorial_For_CTF/tree/master/problems">Angr Practice</a></li>
+<li><a href="https://www.youtube.com/watch?v=QkVzjn3z0iw">Angr Walkthrough</a></li>
+</ol>
+</li>
+<li>
+<p><a href="https://crackmes.one/">crackmes.one</a></p>
+</li>
+<li>
+<p>Android</p>
+<ol>
+<li><a href="https://www.ragingrock.com/AndroidAppRE/">Raging Rock</a></li>
+<li><a href="https://github.com/DERE-ad2001/Frida-Labs">Frida-Labs</a></li>
+</ol>
+</li>
+<li>
+<p>Game Hacking</p>
+<ol>
+<li><a href="https://gamehacking.academy/">Game Hacking Academy</a></li>
+<li><a href="https://github.com/kovidomi/game-reversing">Game-Reversing Github</a></li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="cryptography">Cryptography</h2>
+<h3 id="overview-3">Overview</h3>
+<p>Cryptography challenges in CTFs focus on breaking or analyzing encrypted data. Unlike academic cryptography,
+which deals with designing secure systems, CTF crypto challenges usually involve breaking weak implementations,
+reversing custom schemes, or recognizing misuse of standard algorithms. You are typically given some encrypted or
+encoded data and must figure out a way to decrypt it or extract useful information like a flag.</p>
+<h3 id="learning-and-practice-3">Learning and Practice</h3>
+<ul>
+<li><a href="https://cryptohack.org/">Cryptohack</a></li>
+<li><a href="https://www.sagemath.org/">Sagemath</a></li>
+<li><a href="https://www.dcode.fr/">dCode</a></li>
+</ul>
+<hr>
+<h2 id="forensics">Forensics</h2>
+<h3 id="overview-4">Overview</h3>
+<p>Forensics in CTFs is all about analyzing digital artifacts to uncover hidden information, recover deleted
+content, or trace suspicious activity. The challenges simulate real-world digital investigations, like digging
+through disk images, network traffic, memory dumps, or suspicious files. Unlike other CTF categories that may
+involve breaking code or exploiting vulnerabilities, forensics focuses more on extracting and interpreting data
+that’s already present, sometimes hidden, obfuscated, or buried in metadata.</p>
+<h3 id="tools-2">Tools</h3>
+<ul>
+<li>strings</li>
+<li>binwalk</li>
+<li>exiftool</li>
+<li>steghide</li>
+<li>Wireshark</li>
+<li>CyberChef</li>
+</ul>
+<h3 id="learning-and-practice-4">Learning and Practice</h3>
+<ul>
+<li>Hack the Box</li>
+<li>TryHackMe</li>
+<li>picoCTF</li>
+<li>CTFlearn</li>
+<li>Root Me</li>
+</ul>
+<hr>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="overview-5">Overview</h3>
+<p>Miscellaneous (misc) is a catch-all category in Capture The Flag competitions. It includes challenges that don’t
+clearly fit into other categories like pwn, web, crypto, or forensics. These problems often test creativity,
+outside-the-box thinking, real-world knowledge, or specialized tools. Because it’s broad, misc challenges vary a
+lot, but they&rsquo;re often among the most fun and diverse problems in a CTF.</p>
+<h3 id="tools-3">Tools</h3>
+<ul>
+<li>Cyberchef</li>
+<li>sherlock</li>
+<li>archive.org</li>
+<li>LLMs (especially ChatGPT)</li>
+<li>Social Media Sites</li>
+<li>Search Engines (google dorking)</li>
+</ul>
+<h3 id="learning-and-practice-5">Learning and Practice</h3>
+<ul>
+<li>For OSINT , you can practice on <a href="https://www.geoguessr.com/">GeoGuessr</a></li>
+<li>Learning and practice of this type is usually done by just participating in CTFs.</li>
+</ul>
+<hr>
+<h2 id="most-important-note">Most Important Note</h2>
+<p>The real learning begins when you get your hands dirty. Don’t wait until you feel “ready”. Just jump into CTFs
+and start solving! Even if you struggle or don’t score well at first, every challenge teaches you something
+valuable. The best way to grow in cybersecurity is to keep showing up, keep practicing, and never stop learning.
+Progress might feel slow at times, but if you stay consistent, you&rsquo;ll be amazed at how far you go. Also try to
+read writeups of challenges in your free time. Everyone starts somewhere. JUST START.</p>
+<p>exiftool <!-- raw HTML omitted --></p>
+
+</content>
+<p>
+  
+  <a href="https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/introduction/">#Introduction</a>
+  
+  <a href="https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/resources/">#Resources</a>
+  
+  <a href="https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/web-exploitation/">#Web Exploitation</a>
+  
+  <a href="https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/binary-exploitation/">#Binary Exploitation</a>
+  
+  <a href="https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/reverse-engineering/">#Reverse Engineering</a>
+  
+  <a href="https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/cryptography/">#Cryptography</a>
+  
+  <a href="https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/forensics/">#Forensics</a>
+  
+  <a href="https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/miscellaneous/">#Miscellaneous</a>
+  
+  <a href="https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/most-important-note/">#Most Important Note</a>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

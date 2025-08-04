@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>d4rkc0pe Blog</title>
-    <link>https://d4rkc0pe.github.io/d4rkc0pe-blog/</link>
-    <description>Recent content on d4rkc0pe Blog</description>
+    <title>Resources on d4rkc0pe Blog</title>
+    <link>https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/resources/</link>
+    <description>Recent content in Resources on d4rkc0pe Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 04 Aug 2025 15:25:00 +0000</lastBuildDate><atom:link href="https://d4rkc0pe.github.io/d4rkc0pe-blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Aug 2025 15:25:00 +0000</lastBuildDate><atom:link href="https://d4rkc0pe.github.io/d4rkc0pe-blog/blog/resources/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Complete CTF Handbook</title>
       <link>https://d4rkc0pe.github.io/d4rkc0pe-blog/blogs/ctf-handbook/</link>

@@ -1,2 +1,2 @@
 User-Agent: *
-Sitemap: https://d4rkc0pe.github.io/sitemap.xml
+Sitemap: https://d4rkc0pe.github.io/d4rkc0pe-blog/sitemap.xml

@@ -2,10 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>d4rkc0pe Blog</title>
-    <link>https://d4rkc0pe.github.io/</link>
+    <link>https://d4rkc0pe.github.io/d4rkc0pe-blog/</link>
     <description>Recent content on d4rkc0pe Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <atom:link href="https://d4rkc0pe.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Aug 2025 15:25:00 +0000</lastBuildDate><atom:link href="https://d4rkc0pe.github.io/d4rkc0pe-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Complete CTF Handbook</title>
+      <link>https://d4rkc0pe.github.io/d4rkc0pe-blog/blogs/ctf-handbook/</link>
+      <pubDate>Mon, 04 Aug 2025 15:25:00 +0000</pubDate>
+      
+      <guid>https://d4rkc0pe.github.io/d4rkc0pe-blog/blogs/ctf-handbook/</guid>
+      <description>This handbook is a comprehensive compilation of notes and resources from the d4rkc0de-club/ctf-handbook GitHub repository, designed for beginners and enthusiasts in the world of Capture The Flag competitions.
+ Introduction What actually are CTFs ? A CTF is like a puzzle game for hackers. In simple words, we are given a machine or program which is hackeable and we get a string that we submit and we get points. The flags are usually in the form of FLAG {y0u-h4v3-f0und-4-fl4g}.</description>
+    </item>
+    
   </channel>
 </rss>
